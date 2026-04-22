@@ -1,0 +1,14 @@
+# Ocultar archivos con API keys
+js/config.js
+
+# Ocultar archivos de entorno
+.env
+*.env
+
+# Ocultar carpetas de sistema
+.DS_Store
+Thumbs.db
+
+# Ocultar editor configuraciones
+.vscode/
+.idea/

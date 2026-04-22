@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" href="icon.png" type="image">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Dashboard principal -->
+    <div class="dashboard">
+        <h1>Weatherly App</h1>
+        
+        <div class="reloj">
+            <h2>Hora Actual</h2>
+            <p id="hora">Cargando...</p>
+        </div>
+
+        <div class="buscador">
+            <input type="text" id="ciudadInput" placeholder="Ingresa el nombre de la ciudad">
+            <button id="buscarBtn">Buscar</button>
+        </div>
+
+        <!-- Clima -->
+        <div class="climaCard" id="clima-card" style="display: none;">
+            <div class="ciudad" id="ciudadNombre"></div>
+            <div class="temperatura" id="temperatura">
+                <span class="temp" id="temp"></span>
+                <span class="descripcion" id="descripcion"></span>
+            </div>
+
+            <div class="detalles">
+                <div>💧 Humedad: <span id="humedad"></span>%</div>
+                <div>💨 Viento: <span id="viento"></span> m/s</div>
+                <div>🌡️ Sensación: <span id="sensacion"></span>°C</div>
+            </div>
+        </div>
+
+        <!-- Mensaje de error -->
+        <div class="error" id="errorMsg" style="display: none;"></div>
+        
+        <!-- Cargando -->
+        <div class="loading" id="loading" style="display: none;">Buscando clima...</div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
